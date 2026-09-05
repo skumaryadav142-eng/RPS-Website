@@ -30,11 +30,15 @@ footer{background:#123b63;color:white;text-align:center;padding:25px}
 .ref-link{background:#f1f5f9;padding:12px;border-radius:8px;word-break:break-all;margin:12px 0}
 .small{font-size:13px;color:#666}
 </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const SUPABASE_URL = "dhkaqwlhkgcvrvlwbuct";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_kousisdkVvhK7fwg0RhdmA__31AkRwV";
-let supabaseClient = null;
+let supabaseClient = 
+  window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+    );
+</script>
 if (!SUPABASE_URL.includes("dhkaqwlhkgcvrvlwbuct") && !SUPABASE_PUBLISHABLE_KEY.includes("sb_publishable_kousisdkVvhK7fwg0RhdmA__31AkRwV")) {
   supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
 }
