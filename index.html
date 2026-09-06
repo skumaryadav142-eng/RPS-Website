@@ -152,9 +152,9 @@ async function submitJoin(e){
       location.href.split('#')[0] + '?ref=' + encodeURIComponent(memberId);
     alert('आपका Registration सफलतापूर्वक दर्ज हो गया है। Member ID: ' + memberId);
     e.target.reset();
-  } catch (err) {
-    console.error(err);
-    alert('Registration नहीं हुआ। कृपया फिर से कोशिश करें।');
+  }catch (err) {
+  console.error(err);
+  alert('Supabase Error: ' + (err.message || err));
   } finally {
     btn.disabled = false;
   }
