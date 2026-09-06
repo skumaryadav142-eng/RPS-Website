@@ -155,6 +155,7 @@ async function submitJoin(e){
   }catch (err) {
   console.error(err);
   alert('Supabase Error: ' + (err.message || err));
+};
   } finally {
     btn.disabled = false;
   }
